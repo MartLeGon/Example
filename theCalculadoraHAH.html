@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: aquamarine;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        body{
+            text-align: center;
+        }
+
+        #op, #num1, #num2, #res{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <input type="text" id="num1"><br><br>
+    <input type="button" value="+" id="op" onclick="suma()">
+    <input type="button" value="-" id="op" onclick="resta()">
+    <input type="button" value="x" id="op" onclick="mult()">
+    <input type="button" value="/" id="op" onclick="diviv()"><br><br>
+    <input type="text" id="num2">
+    <hr><h1>=</h1>
+    <input type="text" id="res">
+    <script>
+        function suma (){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var res = x+y;
+
+            var caja=document.getElementById("res");
+            caja.value=res+"";
+        }
+        function resta (){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var res = x-y;
+
+            var caja=document.getElementById("res");
+            caja.value=res+"";
+        }
+        function mult (){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var res = x*y;
+
+            var caja=document.getElementById("res");
+            caja.value=res+"";
+        }
+        function diviv (){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var res = x/y;
+
+            var caja=document.getElementById("res");
+            caja.value=res+"";
+        }
+    </script>
+</body>
+</html>

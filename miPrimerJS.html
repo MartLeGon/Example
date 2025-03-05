@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A use of JS</title>
+</head>
+<body>
+    <h1 onclick="cambioTexto(this)">Hola Mundo</h1>
+    <div onmouseover="cambioColor(this)">
+        <h3>GRUPO 35</h3>
+    </div>
+    <script>
+        var cont=0;
+        function cambioTexto(ref){
+
+            if (cont%2==0){
+            ref.innerHTML="Hola grupo 35";
+            } else {
+                ref.innerHTML="Hola Mundo";
+            }
+            cont++;
+        }
+        function cambioColor(ref){
+            ref.style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html>
